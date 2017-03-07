@@ -3,9 +3,9 @@
 	xmlns:a="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	a:id="@+id/main" a:orientation="vertical"
-	a:layout_width="fill_parent" a:layout_height="wrap_content">
+	a:layout_width="fill_parent" a:layout_height="fill_parent">
 
-	<TextView text="Hello world" a:layout_width="fill_parent"  a:layout_height="wrap_content"/>
+	<TextView a:text="Hello world" a:layout_width="fill_parent"  a:layout_height="wrap_content"/>
 
 </LinearLayout>
 <!-- vim: set sw=4 ts=4 noet nowrap: -->
