@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:a="http://schemas.android.com/apk/res/android" package="org.dyndns.fules.grtest"
+	a:versionCode="1" a:versionName="one">
+	<uses-sdk a:minSdkVersion="15" a:targetSdkVersion="15"/>
+	<uses-permission a:name="android.permission.BIND_INPUT_METHOD"/>
+
+	<application a:label="@string/app_label" a:icon="@drawable/icon_launcher" a:theme="@style/Theme.GRKeyApp">
+		<activity a:name="MainActivity" a:label="@string/app_label" a:theme="@style/Theme.GRKeyboard"> 
+			<intent-filter>
+				<action a:name="android.intent.action.MAIN"/>
+				<category a:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+	</application>
+</manifest> 

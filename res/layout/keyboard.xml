@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:a="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	a:id="@+id/keyboard" a:orientation="vertical"
+	a:layout_width="fill_parent" a:layout_height="wrap_content">
+
+	<EditText a:id="@+id/input" text="" a:layout_width="fill_parent"  a:layout_height="wrap_content"/>
+	<Button a:onClick="drawGesture"  a:layout_width="fill_parent" a:layout_height="wrap_content"/>
+	<org.dyndns.fules.grtest.GestureView a:id="@+id/iv" a:layout_width="fill_parent" a:layout_height="fill_parent" a:padding="8mm" app:gesture="943"/>
+	<!-- a:background="#8000007f" -->
+
+</LinearLayout>
+<!-- vim: set sw=4 ts=4 noet nowrap: -->
+
