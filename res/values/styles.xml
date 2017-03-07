@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<!-- THEMES -->
-	<style name="Theme.GRKeyApp" parent="@android:style/Theme.Holo">
-	</style>
 
-	<style name="Theme.GRKeyboard" parent="@android:style/Theme.Holo">
+	<style name="Theme.MakeProjectSkel" parent="@android:style/Theme.Holo">
 	</style>
 
 </resources>

@@ -3,11 +3,11 @@
 # JAVA_HOME		the root of the Java JDK
 
 # Project settings
-PROJECT=grtest
+PROJECT=skel
 FLAVOUR=debug
-PACKAGE=org.dyndns.fules.grtest
+PACKAGE=org.dyndns.fules
 EXTRA_JARS=
-LOGCAT_TAGS=GRTest
+LOGCAT_TAGS=MakeProjectSkel
 
 ########################################################################################################################
 
@@ -86,6 +86,7 @@ bin/classes/$(PACKAGE_PATH)/R.class:	gen/$(PACKAGE_PATH)/R.java bin/classes
 bin/R.class.last:	bin/classes/$(PACKAGE_PATH)/R.class
 	cmp -s $< $@ || cp $< $@
 
+.SECONDARY:  bin/classes/$(PACKAGE_PATH)/BuildConfig.class
 bin/classes/$(PACKAGE_PATH)/BuildConfig.class:	gen/$(PACKAGE_PATH)/BuildConfig.java bin/classes
 	$(JAVAC) $(JAVA_FLAGS) $<
 
@@ -115,7 +116,7 @@ bin/$(PROJECT).unsigned.apk:	bin/classes.dex $(foreach png,$(PNG_FILES),bin/$(pn
 # Stage #2: Signing the .apk
 bin/$(PROJECT).unaligned.apk:	bin/$(PROJECT).unsigned.apk
 	$(JARSIGNER) \
-	-keystore ~/.android/debug.keystore -storepass android \
+	-keystore debug.keystore -storepass android \
 	-digestalg SHA1 -sigalg MD5withRSA -sigfile CERT \
 	-signedjar $@ $^ androiddebugkey
 
